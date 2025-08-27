@@ -1,1 +1,57 @@
-
+body {
+    background-color: slategray;
+}
+#container {
+    justify-content: space-around;
+    display: grid;
+    column-gap: normal;
+    grid-template-areas: 
+    "header header"
+    "colorinput1 colorinput2"
+    "result result";
+    column-count: 2;
+    align-content: center;
+}
+#zeroth, #first, #second, #third {
+    background-color: #ffffff55;
+    min-width: 500px;
+    min-height: 200px;
+    margin-top: 2em;
+    align-content: center;
+    text-align: center;
+}
+#zeroth {
+    grid-area: header;
+    width: auto;
+}
+#first {
+    grid-area: colorinput1;
+}
+#first input {
+    display: inline-block;
+    vertical-align: middle;
+}
+#second {
+    grid-area: colorinput2;
+}
+#third {
+    
+    min-height: fit-content;
+    padding: 2em;
+    grid-area: result;  
+    width: auto;
+}
+#third input{
+    margin-bottom: 2em;
+}
+#third div{
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    justify-self: center;
+    max-width: 50%;
+}
+.colorInputs {
+    display: inline-block;
+    vertical-align: middle;
+}

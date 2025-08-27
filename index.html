@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>MooMooCow's Color Tool</title>
-    <link rel="stylesheet" href="fuzzystyles.css">
-  </head>
-  <body>
-    <script src="fuzzyscript.js"></script>
-    <noscript>
-      Unfortunately, This webpage does not work without javascript enabled.
-      <br>
-      If your browser cannot support javascript, that makes me very sad :(
-    </noscript>
-    <div id="first">placeholder</div>
-    <div id="second">placeholder</div>  
-  </body>
+
+<head>
+  <title>MooMooCow's Color Tool</title>
+  <link rel="stylesheet" href="fuzzystyles.css">
+</head>
+
+<body>
+  <noscript>
+    Unfortunately, This webpage does not work without javascript enabled.
+    <br>
+    If your browser cannot support javascript, that makes me very sad :(
+  </noscript>
+  <form id="colorform">
+    <div id="container">
+      <div id="zeroth">
+        <h2>MooMooCow's Color "Closeness" Comparison Tool</h2>
+        <h6>Or MCCCT, if you would.</h6>
+        Put a color in on the left, put a palette of colors on the right, and the closest color in the palette will
+        appear in the bottom!
+        <br>
+        After you push submit, of course.
+      </div>
+      <div id="first">
+        Color to match:
+        <br>
+        <input type="color" id="inputcolor" value="#ffffff">
+      </div>
+      <div id="second">
+        Palette colors:
+        <br>
+        <!--first i'd like to get it working with a static number of colors, then maybe add buttons to add/remove colors
+          <div class="colorInputs">
+          <input type="button" value="+" onclick="addColorInput()">
+          <input type="button" value="-" onclick="removeColorInput()">
+        </div>
+        -->
+        <div class="colorInputs" id="palette">
+          <input type="color" id="color1" value="#000000">
+          <br>
+          <input type="color" id="color2" value="#000000">
+          <br>
+          <input type="color" id="color3" value="#000000">
+          <br>
+          <input type="color" id="color4" value="#000000">
+          <br>
+          <input type="color" id="color5" value="#000000">
+        </div>
+      </div>
+      <div id="third">
+        <input type="button" value="Submit" onclick="processColors()">
+        <br>
+        Closest Color:
+        <div id="outputcolor" style="background-color: #ffffff;">
+          #ffffff
+        </div>
+      </div>
+    </div>
+  </form>
+  <script src="fuzzyscript.js"></script>
+</body>
+
 </html>
